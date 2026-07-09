@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="title" content="Stalkee Wrapped — Vos conversations WhatsApp décortiquées">
+    <meta name="description" content="Découvrez les statistiques cachées de vos discussions WhatsApp. Qui est le plus bavard ? Qui abuse des vocaux ? Calculez votre score Simp Meter en toute sécurité. Analyse 100% locale et privée.">
+    <meta name="keywords" content="stalkee wrapped, whatsapp wrapped, statistiques whatsapp, analyse conversation whatsapp, simp meter whatsapp, securite locale, bilan whatsapp, spotify wrapped whatsapp">
+    <meta name="author" content="Stalkee">
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph / Facebook (Pour de superbes aperçus sur WhatsApp, Facebook et LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://webbyteagency.github.io/stalkee/"> <!-- Remplace par ton URL finale -->
+    <meta property="og:title" content="Stalkee Wrapped — Notre conversation décortiquée">
+    <meta property="og:description" content="Qui de nous deux monopolise l'espace ? Découvre notre bilan annuel WhatsApp personnalisé. 100% sécurisé, local et anonyme.">
+    <meta property="og:image" content="https://webbyteagency.github.io/stalkee/assets/og-preview.png"> <!-- Lien vers une image de couverture (1200x630px) -->
+    <meta property="og:site_name" content="Stalkee Wrapped">
+    <meta property="og:locale" content="fr_FR">
+
+    <!-- Twitter (Pour optimiser le partage viral sur X / Twitter) -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://webbyteagency.github.io/stalkee/">
+    <meta property="twitter:title" content="Stalkee Wrapped — Notre conversation décortiquée">
+    <meta property="twitter:description" content="Découvre qui est le pilier émotionnel du groupe et qui abuse des mèmes. Génère ton propre rapport de chat WhatsApp localement.">
+    <meta property="twitter:image" content="https://webbyteagency.github.io/stalkee/assets/og-preview.png">
+
+    <!-- Mobile Integration & PWA-ready configurations -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <meta name="theme-color" content="#0b0f0c"> <!-- Coordonné avec le fond vert sombre de l'app -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <title>Stalkee • Ton WhatsApp Wrapped</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <!-- Chargement de Tailwind CSS pour le style brutaliste -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    animation: {
+                        'fade-in': 'fadeIn 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards',
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(10px)' },
+                            '10%': { opacity: '1', transform: 'translateY(0)' },
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-N8HWW6JZRY"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-N8HWW6JZRY');
+    </script>
+    <style>
+        /* Style global sombre et typographies épurées */
+        body {
+            background-color: #050505;
+            color: #ffffff;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Personnalisation de la scrollbar pour rester dans l'ambiance sombre */
+        ::-webkit-scrollbar {
+            width: 6px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #050505;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #1a1a1a;
+            border-radius: 3px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #252525;
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col justify-between selection:bg-[#E0FE00] selection:text-black">
+   
+    <!-- Conteneur principal de l'application -->
+    <!-- C'est ici que ton js/main.js va injecter dynamiquement tous les écrans -->
+    <main id="app" class="w-full flex-grow flex flex-col justify-between"></main>
+
+    <!-- Point d'entrée de ton architecture JavaScript modulaire -->
+    <!-- Le type="module" est obligatoire pour pouvoir utiliser les "import/export" ES6 en natif -->
+    <!-- Dans ton index.html -->
+    <script type="module" src="js/main.js?v=1.1"></script>
+</body>
+</html>
