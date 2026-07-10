@@ -11,8 +11,8 @@ export class DropZone {
     template() {
         return `
             <div class="max-w-4xl mx-auto px-6 text-center animate-fade-in flex flex-col items-center justify-center min-h-[70vh]">
-                <span class="inline-block bg-[#111] text-zinc-400 text-[10px] font-mono uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
-                    AUCUNE DONNÉE ENREGISTRÉE
+                <span class="inline-block bg-[#111] text-zinc-400 text-[8px] font-mono uppercase tracking-widest px-4 py-1.5 rounded-full mb-6">
+                    T'inquiète! Aucune donnée enregistrée
                 </span>
 
                 <h1 class="text-4xl md:text-7xl font-black tracking-tighter uppercase mb-4 leading-none">
