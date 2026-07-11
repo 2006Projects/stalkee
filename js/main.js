@@ -2,6 +2,7 @@ import { store } from './core/store.js';
 import { Navbar } from './components/Navbar.js';
 import { DropZone } from './components/DropZone.js';
 import { SlideIntro } from './slides/SlideIntro.js';
+import { NotificationManager } from './core/NotificationManager.js'; // 1. Importation du gestionnaire
 
 class App {
     constructor() {
@@ -11,17 +12,23 @@ class App {
         this.navbar = new Navbar();
         this.dropZone = new DropZone();
         this.slideIntro = new SlideIntro();
+        
+        // 2. Initialisation du système de notifications push / toasts
+        this.notifManager = new NotificationManager();
 
         this.init();
     }
 
     init() {
-        // 1. On s'abonne aux changements d'état du Store
+        // 3. Lancement des notifications (Service Worker + Toasts cycliques) au démarrage
+        this.notifManager.init();
+
+        // On s'abonne aux changements d'état du Store
         store.subscribe((state) => {
             this.renderApp(state);
         });
 
-        // 2. Premier rendu au chargement du site
+        // Premier rendu au chargement du site
         this.renderApp(store.state);
     }
 
@@ -40,6 +47,7 @@ class App {
         this.appContainer.appendChild(screenContainer);
 
         // Routage dynamique simple basé sur le State
+        // NOTE: Pense à vérifier que ta fonction d'analyse ou ta démo passe bien `state.isAnalyzed = true`
         if (!state.isAnalyzed) {
             // Écran d'accueil : On charge l'interface d'import
             this.dropZone.render(screenContainer);
