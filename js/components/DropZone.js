@@ -179,12 +179,12 @@ export class DropZone {
         <!-- --- FOOTER --- -->
         <footer class="w-full max-w-4xl mx-auto mt-20 pt-8 pb-12 border-t border-zinc-900 flex flex-col md:flex-row items-center justify-between gap-4 font-mono text-[10px] tracking-wider uppercase text-zinc-600">
             <div class="flex items-center gap-2">
-                <span>© 2026 STALKEE</span>
+                <span>© STALKEE</span>
                 <span class="text-zinc-800">//</span>
-                <span>Un produit de WebByte Agency</span>
+                <span>Un produit de 2006 Projects</span>
             </div>
             <div class="flex items-center gap-6">
-                <a href="https://wa.me/237620828497" target="_blank" class="text-zinc-400 hover:text-[#E0FE00] transition-colors flex items-center gap-1.5 group">
+                <a href="https://wa.me/237652148417" target="_blank" class="text-zinc-400 hover:text-[#E0FE00] transition-colors flex items-center gap-1.5 group">
                     <span>SERVICE CLIENT</span> 
                     <span class="text-[#E0FE00] group-hover:translate-x-0.5 transition-transform">⇢</span>
                 </a>
